@@ -1,22 +1,27 @@
 import React from "react";
-import {View, Text, TouchableOpacityBase, TouchableOpacity, TouchableOpacityProps} from 'react-native';
+import {View, Text} from 'react-native';
+import { RectButton, RectButtonProps } from "react-native-gesture-handler";
 
 import { SvgProps } from "react-native-svg";
+import { style} from "./styles";
 
-type buttonProps = TouchableOpacityProps &{
+type buttonProps = RectButtonProps &{
     icon: React.FC<SvgProps>
 }
 
 export function Button({icon:Icon,...res}: buttonProps){
     return(
-        <TouchableOpacity >
-            <Text>
+        <RectButton style={style.container} >
+         
+            <Text style={style.text}>
                 let's play
             </Text>
             <Icon
-            width={20}
-            height={20}
+            width={30}
+            height={30}
             />
-        </TouchableOpacity>
+        
+           
+        </RectButton>
     );
 }

@@ -10,32 +10,33 @@ import { style } from "./style";
 export function Home(){
     return(
         <View style={style.container}>
-            <View>
-                <Text>
+            <View style={style.content}>
+                <Text style={style.text}>
                     hey homie
                     the photo bellow is
                 </Text>
-                <Text>
+                <Text style={style.bold}>
                     png
                 </Text>
-                <Image source={ilustartion}/>
+                <Image 
+                style={style.image}
+                source={ilustartion}/>
             </View>
-            <View>
-                <Text>
+            <View style={style.content}>
+                <Text style={style.text}>
                     and that photo bellow is
                 </Text>
-                <Text>
+                <Text style={style.bold}>
                     svg
                 </Text>
                 <Ranked
-                width={300}
-                height={300}
+                width={270}
+                height={270}
                
                 />
             </View>
-            <Button
-            icon={Ranked}
-            />
+            <Button icon={Ranked}/>
+           
         </View>
     )
 }
